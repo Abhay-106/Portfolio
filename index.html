@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Abhay | BCA Student & Aspiring Developer</title>
+<meta name="description" content="Portfolio of Abhay (LuffyXD), a BCA student learning C, web development and computer science fundamentals.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;500;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<script>
+  /* Apply saved theme before first paint (no flash) */
+  try { document.documentElement.dataset.theme = localStorage.getItem('theme') || (matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark'); } catch (e) {}
+</script>
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="logo" href="#home">abhay<span>.</span></a>
+    <button id="theme-toggle" type="button" aria-label="Toggle dark mode">
+      <svg class="sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+      <svg class="moon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A9 9 0 1 1 11.2 3 7 7 0 0 0 21 12.8z"/></svg>
+    </button>
+    <ul class="links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</header>
+
+<main>
+  <section id="home">
+    <div class="wrap hero">
+      <div>
+        <h1>Hi, I'm Abhay<span>.</span></h1>
+        <!-- EDIT: your intro line -->
+        <p class="lead">BCA student building my foundations in C, web development and computer science, one project at a time.</p>
+        <div class="actions">
+          <a class="btn primary" href="#projects">See my projects</a>
+          <a class="btn ghost" href="#contact">Contact me</a>
+        </div>
+      </div>
+      <div class="term" aria-label="C program that prints a greeting">
+        <div class="term-bar"><i class="dot"></i><i class="dot"></i><i class="dot"></i><span>hello.c</span></div>
+        <pre><code id="code">#include &lt;stdio.h&gt;
+
+int main(void) {
+    printf("Hello, I'm Abhay!\n");
+    return 0;
+}</code></pre>
+        <div class="out" id="output">$ ./hello<br>Hello, I'm Abhay!</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="wrap about">
+      <img class="avatar" src="https://avatars.githubusercontent.com/u/330256329?v=4" alt="Abhay's GitHub profile photo" width="180" height="180">
+      <div>
+        <h2>About me</h2>
+        <!-- EDIT: write your own story here -->
+        <p>I'm a BCA student and aspiring developer. I started coding with C, and I'm now learning web development alongside core computer science fundamentals. Online I go by LuffyXD.</p>
+        <dl class="facts">
+          <dt>GitHub</dt><dd>Abhay-106 (LuffyXD)</dd>
+          <dt>Studying</dt><dd>BCA</dd>
+          <dt>Learning</dt><dd>C, web development, CS fundamentals</dd>
+          <dt>Status</dt><dd>Focusing</dd>
+          <!-- EDIT: add college, city, year, etc. -->
+        </dl>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills">
+    <div class="wrap">
+      <h2>Skills</h2>
+      <ul class="chips"><!-- EDIT: add or remove skills -->
+        <li>C</li><li>HTML</li><li>CSS</li><li>JavaScript</li><li>Git &amp; GitHub</li><li>CS fundamentals</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="projects">
+    <div class="wrap">
+      <h2>Projects</h2>
+      <p class="sub">Pulled live from my GitHub, so new repositories show up here automatically.</p>
+      <div class="grid" id="project-grid">
+        <a class="project" href="https://github.com/Abhay-106/C_learning" target="_blank" rel="noopener"><h3>C_learning</h3><p>Learning to code for the first time with the C programming language.</p><span class="lang">C</span></a>
+        <a class="project" href="https://github.com/Abhay-106/web-dev" target="_blank" rel="noopener"><h3>web-dev</h3><p>My web development practice, built with HTML.</p><span class="lang">HTML</span></a>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="wrap contact">
+      <div>
+        <h2>Let's talk</h2>
+        <p>Have an idea, an internship, or a project to build together? Send a message and I'll reply.</p>
+        <ul class="contact-links">
+          <li><a id="email-link" href="#">email</a></li>
+          <li><a href="https://github.com/Abhay-106" target="_blank" rel="noopener">github.com/Abhay-106</a></li>
+          <!-- EDIT: add LinkedIn, Instagram, etc. -->
+        </ul>
+      </div>
+      <form class="form" id="contact-form">
+        <label>Your name <input name="name" required autocomplete="name"></label>
+        <label>Your email <input name="email" type="email" required autocomplete="email"></label>
+        <label>Message <textarea name="message" rows="4" required></textarea></label>
+        <button class="btn primary" type="submit">Send message</button>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer><div class="wrap">© <span id="year"></span> Abhay. Built with HTML, CSS and JavaScript.</div></footer>
+
+<script src="script.js"></script>
+</body>
+</html>
